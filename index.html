@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Học viện Ngân hàng | Một hành trình, một mái trường</title>
+
+    <!-- ==============================
+         FONT
+    =============================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tiêu đề tab trình duyệt chuẩn SEO và nhận diện -->
+    <title>Học Viện Ngân Hàng - 65 Năm Tự Hào (1961 - 2026)</title>
+
+    <!-- Favicon (Biểu tượng tab trình duyệt) sử dụng logo BAV -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="đường_dẫn_đến_logo_bav_của_bạn.png"
+    />
+
+    <!-- Thẻ meta theme-color để đổi màu thanh công cụ trên Mobile/Browser thành màu xanh đặc trưng của BAV -->
+    <meta name="theme-color" content="#13294b" />
+  </head>
+
+  <!-- THIỆP CHÀO MỪNG KỶ NIỆM 65 NĂM -->
+  <div id="greeting-card-screen">
+    <div class="greeting-card">
+      <div class="card-logo">
+        <img src="./logo.png" alt="Logo BAV" />
+      </div>
+      <span class="anniversary-badge">Kỷ Niệm 65 Năm Thành Lập</span>
+      <h2>Học Viện Ngân Hàng</h2>
+      <p>
+        Trân trọng gửi đến bạn lời chúc tốt đẹp nhất. Hãy cùng nhìn lại chặng
+        đường 65 năm vẻ vang, nơi lưu giữ biết bao thế hệ thanh xuân và tri thức
+        tự hào dưới mái trường BAV.
+      </p>
+      <button class="btn-open-card" onclick="openGreetingCard()">
+        Mở thiệp chúc mừng
+      </button>
+    </div>
+  </div>
+  <body>
+    <!-- ==================================================
+     BACKGROUND CHUNG
+================================================== -->
+
+    <div class="page-background"></div>
+
+    <!-- ==================================================
+     THANH ĐIỀU HƯỚNG
+================================================== -->
+
+    <header class="top-nav">
+      <div class="nav-container">
+        <!-- LOGO -->
+
+        <a href="#home" class="brand">
+          <img src="./logo.png" alt="Logo Học viện Ngân hàng" />
+
+          <div class="brand-text">
+            <span>HỌC VIỆN</span>
+
+            <strong>NGÂN HÀNG</strong>
+          </div>
+        </a>
+
+        <!-- MENU -->
+
+        <nav class="main-menu">
+          <a href="#intro" class="menu-item active">
+            <span>01</span>
+            Dấu ấn mái trường
+          </a>
+
+          <a href="#journey" class="menu-item">
+            <span>02</span>
+            Những dấu mốc
+          </a>
+
+          <a href="#teachers" class="menu-item">
+            <span>03</span>
+            Các khoa đào tạo
+          </a>
+
+          <a href="#students" class="menu-item">
+            <span>04</span>
+            Thanh xuân BAV
+          </a>
+
+          <a href="#thanks" class="menu-item">
+            <span>05</span>
+            Lời cảm ơn
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ==================================================
+     NÚT NỔI: ÂM NHẠC + LỜI CHÚC
+================================================== -->
+
+    <div class="floating-actions">
+      <!-- MUSIC -->
+
+      <div class="music-control" id="musicControl">
+        <button id="musicButton" class="round-control">♫</button>
+
+        <div id="musicLabel" class="floating-label">Bật nhạc</div>
+      </div>
+
+      <!-- LỜI CHÚC -->
+
+      <button class="wish-control" onclick="openWishBox()">
+        <span>♡</span>
+
+        <span>Gửi lời chúc</span>
+      </button>
+    </div>
+
+    <!-- ==================================================
+     ÂM THANH
+================================================== -->
+
+    <audio
+      id="backgroundMusic"
+      src="./Hành khúc Học viện Ngân hàng [LVsBtRv6d7Y].mp3"
+      loop
+    ></audio>
+
+    <!-- ==================================================
+     <!-- CHƯƠNG 0 — SPLASH (ĐÃ ĐỔI THÀNH THÔNG ĐIỆP TAP2ME) -->
+    <section id="home" class="hero">
+      <div class="hero-image"></div>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <!-- LOGO -->
+        <div class="hero-logo">
+          <img src="./logo.png" alt="Học viện Ngân hàng" />
+        </div>
+
+        <span class="hero-small-title"> MỘT HÀNH TRÌNH · MỘT MÁI TRƯỜNG </span>
+
+        <h1>
+          Chào mừng đến với<br />
+          <strong> Học viện Ngân hàng </strong>
+        </h1>
+
+        <div class="hero-line"></div>
+
+        <p>
+          Nơi những hành trình bắt đầu,<br />
+          nơi những năm tháng thanh xuân ở lại.
+        </p>
+
+        <button class="start-button" onclick="startJourney()">
+          <span> Bắt đầu hành trình </span>
+          <b>↓</b>
+        </button>
+      </div>
+
+      <!-- ĐOẠN MỚI THAY THẾ CHO CHỮ KÉO XUỐNG -->
+      <div class="hero-tap2me-badge">
+        <span>Chạm để kết nối đồng hành cùng BAV bởi </span>
+        <a
+          href="https://www.facebook.com/profile.php?id=61594113554705"
+          target="_blank"
+          rel="noopener"
+          >Tap2Me</a
+        >
+      </div>
+    </section>
+
+    <!-- ==================================================
+     CHƯƠNG 1
+================================================== -->
+
+    <section id="intro" class="content-section intro-section">
+      <div class="content-container">
+        <!-- TIÊU ĐỀ -->
+
+        <div class="section-heading">
+          <span class="chapter-number"> CHƯƠNG 01 </span>
+
+          <h2>Dấu ấn mái trường</h2>
+
+          <p>Một nơi để học tập · Một nơi để trưởng thành</p>
+        </div>
+
+        <!-- NỘI DUNG -->
+
+        <div class="intro-layout">
+          <div class="intro-photo">
+            <div class="photo-border"></div>
+
+            <img src="./Ảnh trường.jpg" alt="Học viện Ngân hàng" />
+
+            <div class="photo-caption">
+              HỌC VIỆN NGÂN HÀNG
+
+              <span> Thành lập từ năm 1961 </span>
+            </div>
+          </div>
+
+          <div class="intro-text">
+            <span class="small-heading"> VỀ MÁI TRƯỜNG </span>
+
+            <h3>
+              Có những nơi ta đến<br />
+              để học, rồi ở lại trong ký ức.
+            </h3>
+
+            <p>
+              Học viện Ngân hàng là nơi những người trẻ gặp nhau, học tập, khám
+              phá bản thân và cùng tạo nên những năm tháng đáng nhớ.
+            </p>
+
+            <p>
+              Từ giảng đường, thư viện, sân trường cho đến những hoạt động ngoại
+              khóa, mỗi góc nhỏ đều có thể trở thành một phần của câu chuyện
+              thanh xuân.
+            </p>
+
+            <div class="intro-quote">
+              <span>"</span>
+              Mỗi hành trình trưởng thành đều bắt đầu từ một nơi mà ta gọi là
+              mái trường.
+              <span>"</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+     CHƯƠNG 2 — TIMELINE
+================================================== -->
+
+    <section id="journey" class="content-section journey-section">
+      <div class="content-container">
+        <div class="section-heading">
+          <span class="chapter-number"> CHƯƠNG 02 </span>
+
+          <h2>Những dấu mốc</h2>
+
+          <p>Một hành trình được viết nên từ những cột mốc</p>
+        </div>
+
+        <!-- TIMELINE -->
+
+        <div class="timeline">
+          <!-- ITEM 1 -->
+
+          <div class="timeline-item">
+            <div class="timeline-date">1961</div>
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+              <span> KHỞI ĐẦU </span>
+
+              <h3>Những bước chân đầu tiên</h3>
+
+              <p>
+                Trường Cao cấp nghiệp vụ Ngân hàng thành lập vào ngày 13/9/1961.
+              </p>
+            </div>
+          </div>
+
+          <!-- ITEM 2 -->
+
+          <div class="timeline-item">
+            <div class="timeline-date">PHÁT TRIỂN</div>
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+              <span> MỞ RỘNG </span>
+
+              <h3>Những thế hệ tiếp nối</h3>
+
+              <p>
+                Trung tâm Đào tạo và Nghiên cứu Khoa học Ngân hàng ngày
+                23/3/1993.
+              </p>
+            </div>
+          </div>
+
+          <!-- ITEM 3 -->
+
+          <div class="timeline-item">
+            <div class="timeline-date">HỘI NHẬP</div>
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+              <span> ĐỔI MỚI </span>
+
+              <h3>Bước ra thế giới rộng lớn</h3>
+
+              <p>Học viện Ngân hàng (HVNH) được thành lập ngày 09/02/1998.</p>
+            </div>
+          </div>
+
+          <!-- ITEM 4 -->
+
+          <div class="timeline-item">
+            <div class="timeline-date">HÔM NAY</div>
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+              <span> TƯƠNG LAI </span>
+
+              <h3>Tiếp tục viết tiếp hành trình</h3>
+
+              <p>
+                Những thế hệ mới tiếp tục bước vào mái trường và viết nên những
+                câu chuyện của riêng mình.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+     CHƯƠNG 3 — THẦY CÔ
+================================================== -->
+
+    <section id="teachers" class="content-section teachers-section">
+      <div class="content-container">
+        <div class="section-heading">
+          <span class="chapter-number"> CHƯƠNG 03 </span>
+
+          <h2>Các khoa đào tạo</h2>
+
+          <p>Khám phá các khối ngành trọng điểm tại Học viện Ngân hàng</p>
+        </div>
+
+        <!-- KHOA - Giữ nguyên cấu trúc div gốc để không mất hiệu ứng -->
+
+        <div class="faculty-area">
+          <div class="faculty-list">
+            <div class="faculty-item">Tài chính</div>
+            <div class="faculty-item">Ngân hàng</div>
+            <div class="faculty-item">Kế toán</div>
+            <div class="faculty-item">Quản trị kinh doanh</div>
+            <div class="faculty-item">Kinh doanh quốc tế</div>
+            <div class="faculty-item">Công nghệ thông tin</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+     CHƯƠNG 4 — SINH VIÊN
+================================================== -->
+
+    <section id="students" class="content-section students-section">
+      <div class="content-container">
+        <div class="section-heading">
+          <span class="chapter-number"> CHƯƠNG 04 </span>
+
+          <h2>Thanh xuân BAV</h2>
+
+          <p>Những khoảnh khắc mà sau này chúng ta sẽ nhớ</p>
+        </div>
+
+        <!-- GALLERY -->
+
+        <div class="memory-gallery">
+          <div class="memory-card memory-large">
+            <img
+              src="./Ảnh chào tân sinh viên.jpg"
+              alt="Sinh viên Học viện Ngân hàng"
+            />
+
+            <div class="memory-caption">
+              <span> 01 </span>
+
+              <p>Những ngày tháng tuổi trẻ.</p>
+            </div>
+          </div>
+
+          <div class="memory-card">
+            <img
+              src="./Ảnh sự kiện mùi cỏ cháy.jpg"
+              alt="Sinh viên Học viện Ngân hàng"
+            />
+
+            <div class="memory-caption">
+              <span> 02 </span>
+
+              <p>Những người bạn năm ấy.</p>
+            </div>
+          </div>
+
+          <div class="memory-card">
+            <img
+              src="./Ảnh chào đón k29.jpg"
+              alt="Sinh viên Học viện Ngân hàng"
+            />
+
+            <div class="memory-caption">
+              <span> 03 </span>
+
+              <p>Cùng nhau tạo nên thanh xuân.</p>
+            </div>
+          </div>
+
+          <div class="memory-card">
+            <img
+              src="./ảnh I love BAV.jpg"
+              alt="Sinh viên Học viện Ngân hàng"
+            />
+
+            <div class="memory-caption">
+              <span> 04 </span>
+
+              <p>Những kỷ niệm không thể quên.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="memory-ending">
+          <p>
+            “Có những khoảnh khắc tưởng như rất bình thường, nhưng sau này lại
+            trở thành điều ta nhớ nhất.”
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+     CHƯƠNG 5 — LỜI CẢM ƠN
+================================================== -->
+
+    <section id="thanks" class="content-section thanks-section">
+      <div class="content-container">
+        <div class="letter-card">
+          <div class="letter-symbol">✦</div>
+
+          <span class="chapter-number"> CHƯƠNG 05 </span>
+
+          <h2>Lời cảm ơn</h2>
+
+          <div class="letter-line"></div>
+
+          <p>
+            Cảm ơn Học viện Ngân hàng vì đã trở thành một phần trong những năm
+            tháng đẹp nhất của tuổi trẻ.
+          </p>
+
+          <p>
+            Cảm ơn những người thầy, người cô đã tận tâm chỉ dẫn, những người
+            bạn đã cùng chúng ta đi qua những ngày tháng ấy.
+          </p>
+
+          <p>
+            Và cảm ơn chính những năm tháng dưới mái trường này - nơi chúng ta
+            đã học, đã lớn lên và đã trở thành phiên bản của chính mình hôm nay.
+          </p>
+
+          <div class="final-quote">
+            <span> Một mái trường. </span>
+
+            <span> Một hành trình. </span>
+
+            <strong> Một thanh xuân. </strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+<!-- PHẦN KẾT THÚC CỦA TRANG -->
+    <section class="final-section">
+      <div class="final-bg"></div>
+      <div class="final-overlay"></div>
+
+      <div class="final-content">
+        <img src="./logo.png" alt="Logo BAV" class="final-logo" />
+
+        <span> HỌC VIỆN NGÂN HÀNG </span>
+
+        <h2>
+          Khép lại hành trình hôm nay,
+          <br />
+          vững bước tiếp cho ngày mai.
+        </h2>
+
+        <button class="replay-button" onclick="replayJourney()">
+          ↻ &nbsp; Xem lại hành trình
+        </button>
+      </div>
+    </section>
+
+    <!-- ĐƯA KHỐI TAP2ME RA NGOÀI VÀ ĐẶT XUỐNG DƯỚI CÙNG NÀY -->
+    <div class="tap2me-subtle-box">
+      <div class="tap2me-content">
+        <span class="tap2me-tag">✨ Sáng kiến kết nối của sinh viên</span>
+        <p>
+          Mỗi dấu ấn thanh xuân đều xứng đáng được lưu giữ trọn vẹn. Chạm để kết
+          nối đồng hành cùng BAV bởi
+          <a
+            href="https://www.facebook.com/profile.php?id=61594113554705"
+            target="_blank"
+            rel="noopener"
+            class="tap2me-brand"
+            >Tap2Me</a
+          >.
+        </p>
+      </div>
+    </div>
+
+    <!-- ==================================================
+     HỘP GỬI LỜI CHÚC
+================================================== -->
+
+    <div id="wishModal" class="wish-modal">
+      <div class="wish-box">
+        <button class="close-wish" onclick="closeWishBox()">×</button>
+
+        <span class="wish-label"> GỬI LỜI CHÚC </span>
+
+        <h2>Gửi một lời thương</h2>
+
+        <p>Hãy để lại một lời nhắn dành cho Học viện Ngân hàng.</p>
+
+        <textarea
+          id="wishText"
+          placeholder="Viết lời chúc của bạn..."
+        ></textarea>
+
+        <input type="text" id="wishName" placeholder="Tên của bạn" />
+
+        <button class="send-wish" onclick="sendWish()">Gửi lời chúc ♡</button>
+
+        <p id="wishSuccess" class="wish-success"></p>
+      </div>
+    </div>
+
+    <!-- JS -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
